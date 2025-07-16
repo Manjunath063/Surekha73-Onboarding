@@ -4,7 +4,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT || 3090;
+const port = process.env.PORT || 3608;
 
 // PostgreSQL connection
 const pool = new Pool({
@@ -208,5 +208,5 @@ app.get('/api/employees/search/:term', async (req, res, next) => {
 app.use(errorHandler);
 
 app.listen(port, () => {
-    console.log(`Server running on http://16.170.233.75:${port}`);
+    console.log(`Server running on http://13.61.2.118:${port}`);
 });

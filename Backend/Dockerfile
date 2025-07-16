@@ -12,6 +12,6 @@ RUN npm install
 COPY . .
 
 # Expose and start the app
-EXPOSE 3090
+EXPOSE 3068
 CMD ["node", "server.js"]
 

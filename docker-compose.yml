@@ -5,7 +5,7 @@ services:
     image: postgres:13
     container_name: onboarding-postgres
     ports:
-      - "5490:5432"
+      - "5608:5432"
     environment:
       POSTGRES_DB: onboarding_system
       POSTGRES_USER: postgres
@@ -18,9 +18,9 @@ services:
     build: ./Backend
     container_name: onboarding-backend
     ports:
-      - "3090:3090"
+      - "3608:3608"
     environment:
-      PORT: 3090
+      PORT: 3608
       DB_USER: postgres
       DB_HOST: postgres
       DB_NAME: onboarding_system
@@ -33,7 +33,7 @@ services:
     build: ./Employee-side
     container_name: onboarding-employee
     ports:
-      - "8180:80"
+      - "8616:80"
     depends_on:
       - backend
 
@@ -41,7 +41,7 @@ services:
     build: ./HR-side
     container_name: onboarding-hr
     ports:
-      - "8181:80"
+      - "8617:80"
     depends_on:
       - backend
 
